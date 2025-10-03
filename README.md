@@ -1,23 +1,3 @@
-# 📚 Librería Misteriosa
-
-Este repositorio contiene páginas HTML con **juegos de pistas literarias**.  
-Cada archivo muestra pistas antes de revelar un libro misterioso de un género específico.
-
----
-
-## 🌐 Acceso en GitHub Pages
-
-Cuando actives GitHub Pages, podrás acceder a cada género en estas URLs:
-
-- **Clásicos** → `https://TU-USUARIO.github.io/libreria-misteriosa/clasicos.html`
-- **Fantasía** → `https://TU-USUARIO.github.io/libreria-misteriosa/fantasia.html`
-- **Misterio** → `https://TU-USUARIO.github.io/libreria-misteriosa/misterio.html`
-- **Romance** → `https://TU-USUARIO.github.io/libreria-misteriosa/romance.html`
-
-*(reemplaza **TU-USUARIO** con tu nombre de usuario en GitHub).*
-
----
-
 ## 📖 Cómo funciona
 
 1. Escaneas un **QR** o entras al link.  
@@ -55,8 +35,3 @@ Escanea uno de estos QR para ir directo al género:
 Si quieres ampliar la lista de libros o añadir más géneros:
 1. Edita o crea un nuevo archivo `.html`.  
 2. Haz un **Pull Request** con tus cambios.  
-
----
-
-## ✨ Créditos
-Proyecto creado para experimentar con **libros, pistas literarias y QR codes** en una librería.  
