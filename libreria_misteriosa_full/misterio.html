@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Misterio - Librería Misteriosa</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fafafa; text-align: center; padding: 30px; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+    .pista { margin: 10px; font-size: 18px; }
+    .libro { margin-top: 20px; font-size: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Misterio</h1>
+  <div id="contenedor"></div>
+  <button onclick="mostrarPista()">Ver pista</button>
+  <button onclick="mostrarLibro()">Revelar el libro</button>
+
+  <script>
+    const pistas = ['Un detective inglés', 'Vive en Baker Street', 'Creado por Arthur Conan Doyle'];
+    let indice = 0;
+    function mostrarPista() {
+      if (indice < pistas.length) {
+        const div = document.getElementById("contenedor");
+        const p = document.createElement("div");
+        p.className = "pista";
+        p.textContent = pistas[indice];
+        div.appendChild(p);
+        indice++;
+      }
+    }
+    function mostrarLibro() {
+      const div = document.getElementById("contenedor");
+      const p = document.createElement("div");
+      p.className = "libro";
+      p.innerHTML = "📖 Sherlock Holmes - <a href='https://es.wikipedia.org/wiki/Sherlock_Holmes' target='_blank'>Ver más</a>";
+      div.appendChild(p);
+    }
+  </script>
+</body>
+</html>
