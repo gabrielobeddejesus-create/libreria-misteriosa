@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Romance - Libro Misterioso</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f7f3ea; }
+    .pista { font-size: 1.3em; margin: 20px 0; color: #444; }
+    .revelar { display: none; margin-top: 25px; font-size: 1.3em; font-weight: bold; color: #2c3e50; }
+    button { padding: 12px 24px; margin: 10px; font-size: 1em; border: none; background: #8e44ad; color: white; border-radius: 8px; cursor: pointer; }
+    button:hover { background: #732d91; }
+  </style>
+</head>
+<body>
+  <h1>📖 Tu Libro Misterioso (Romance)</h1>
+  <p class="pista" id="pista"></p>
+  <button id="btnPista" onclick="mostrarPista()">Ver pista</button>
+  <button id="btnRevelar" onclick="mostrarLibro()" style="display:none;">Revelar el libro</button>
+  <p class="revelar" id="libro"></p>
+
+  <script>
+    const libros = [{'titulo': 'Cumbres Borrascosas', 'url': 'https://tulibreria.com/cumbres', 'pistas': ['Ambientada en los páramos ingleses.', 'Historia de amores tormentosos.', 'Escrita por Emily Brontë.']}, {'titulo': 'El amor en los tiempos del cólera', 'url': 'https://tulibreria.com/colera', 'pistas': ['Una historia de amor que dura décadas.', 'Ambientada en el Caribe.', 'Escrita por Gabriel García Márquez.']}, {'titulo': 'Un paseo para recordar', 'url': 'https://tulibreria.com/paseo', 'pistas': ['Una novela juvenil.', 'Romance con tintes trágicos.', 'Escrita por Nicholas Sparks.']}];
+
+    const elegido = libros[Math.floor(Math.random() * libros.length)];
+    let indicePista = 0;
+
+    function mostrarPista() {
+      if (indicePista < elegido.pistas.length) {
+        document.getElementById("pista").textContent = elegido.pistas[indicePista];
+        indicePista++;
+        if (indicePista === elegido.pistas.length) {
+          document.getElementById("btnPista").style.display = "none";
+          document.getElementById("btnRevelar").style.display = "inline-block";
+        }
+      }
+    }
+
+    function mostrarLibro() {
+      const libroEl = document.getElementById("libro");
+      libroEl.innerHTML = `✨ El libro misterioso es: <a href="${elegido.url}" target="_blank">${elegido.titulo}</a>`;
+      libroEl.style.display = "block";
+      document.getElementById("btnRevelar").style.display = "none";
+    }
+  </script>
+</body>
+</html>
